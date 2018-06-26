@@ -1,19 +1,44 @@
-<p>
-  header works!
-</p>
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand" style="width:1440px; background-color:bisque; height:20px;">
-    <div style="width:300px;">
-    <!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">Daily Deals</a> -->
-      Hi {{name}}
-    <span aria-hidden="true">Daily Deals</span>
-    <span aria-hidden="true">Help & Contact</span>
-  </div>  
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bitcoin_logo.svg/2000px-Bitcoin_logo.svg.png" alt="Bulma: a modern CSS framework based on Flexbox">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <form>
+        <div class="field is-grouped">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Shop Now">
+          </p>
+          <p class="control">
+            <a class="button is-info">
+              Search
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
   </div>
-  <div style="width:200px;">
-    <span aria-hidden="true">Sell</span>
-      <span aria-hidden="true">My Cryptobay</span>
-      <img>
-      <img id="shopping_cart" src="">
+  <div class="tabs is-centered">
+    <ul>
+      <li class="is-active">
+        <a>Catergory 1</a>
+      </li>
+      <li>
+        <a>Catergory 2</a>
+      </li>
+      <li>
+        <a>Catergory 3</a>
+      </li>
+      <li>
+        <a>Catergory 4</a>
+      </li>
+    </ul>
   </div>
-</nav>

@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component'
 const routes: Routes = [
   {path: 'item', component:ItempageComponent},
   {path: 'home', component:HomeComponent },
-  {path: '', pathMatch:'full', redirectTo:'pets'}
+  {path: '', pathMatch:'full', redirectTo:'home'}
 ];
 
 
