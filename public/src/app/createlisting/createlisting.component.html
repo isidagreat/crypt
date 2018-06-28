@@ -1,0 +1,33 @@
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <h3 class="title has-text-grey">Create a listing</h3>
+                <p class="subtitle has-text-grey">Start Selling Now!</p>
+                <div class="box">
+                    <form (submit)="onSubmit(myform)" #myform="ngForm">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ngModel type="text" name="title" placeholder="Title" autofocus="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large"  ngModel type="text" name="description" placeholder="description">
+                            </div>
+                        </div>
+                        <div class="control">
+                            <input class="input is-large" ngModel type="text" name="url" placeholder="image url">
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" ngModel type="number" name="price" placeholder="Price">
+                            </div>
+                        </div>
+                        <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -6,43 +6,23 @@
 	</div>
 </div>
 <div class="columns">
-	<div class="column is-offset-one-quarter">
+	<div class="column">
 		<h1 class="title"> Buy now!</h1>
 	</div>
 </div>
 <div class="columns">
-	<figure class="column is-offset-one-quarter is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
+	<figure *ngFor = "let listin of listing" class="column is-1">
+		<a href="/item/{{listin._id}}"><img class="image is-128x128" src="{{listin.picture}}" alt=""></a>
+		<a href="/item/{{listin._id}}"><h1 class="subtitle">{{listin.title}}</h1></a>
 	</figure>
 </div>
 <div class="columns">
-	<div class="column is-offset-one-quarter">
+	<div class="column">
 		<h1 class="title"> New Auctions</h1>
 	</div>
 </div>
 <div class="columns">
-	<figure class="column is-offset-one-quarter is-1">
+	<figure class="column is-1">
 		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
 		<h1 class="subtitle">Product</h1>
 	</figure>
@@ -68,12 +48,12 @@
 	</figure>
 </div>
 <div class="columns">
-	<div class="column is-offset-one-quarter">
+	<div class="column">
 		<h1 class="title">Ending Soon!</h1>
 	</div>
 </div>
 <div class="columns">
-	<figure class="column is-offset-one-quarter is-1">
+	<figure class="column is-1">
 		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
 		<h1 class="subtitle">Product</h1>
 	</figure>
