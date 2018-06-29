@@ -74,7 +74,7 @@ module.exports = {
             description: req.body.description,
             price: req.body.price,
             picture: req.body.url,
-            auctionEnd: req.body.date,
+            auctionEnd: req.body.endtime,
             updated_at: new Date(),
             created_at: new Date()
         });

@@ -13,6 +13,7 @@ alisting: any;
 
   ngOnInit() {
     this.getlistings();
+    this.getauction();
   }
   getauction(){
     //  Our http Response is an observable, store it in the variable tempObservable
@@ -21,7 +22,7 @@ alisting: any;
     auctions.subscribe(data => {
       console.log("got the auction listings!", data) 
       this.alisting = data['_listing'];
-      console.log(this.listing);
+      console.log(this.alisting);
     });
 
 }

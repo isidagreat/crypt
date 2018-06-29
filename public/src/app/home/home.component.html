@@ -22,30 +22,10 @@
 	</div>
 </div>
 <div class="columns">
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
+		<figure *ngFor = "let listins of alisting" class="column is-1">
+				<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
+				<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
+			</figure>
 </div>
 <div class="columns">
 	<div class="column">
@@ -53,28 +33,8 @@
 	</div>
 </div>
 <div class="columns">
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
-	<figure class="column is-1">
-		<img class="image is-128x128" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="">
-		<h1 class="subtitle">Product</h1>
-	</figure>
+		<figure *ngFor = "let listins of alisting" class="column is-1">
+				<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
+				<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
+			</figure>
 </div>
