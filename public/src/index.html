@@ -7,6 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script type="text/javascript" src="../node_modules/bulma-extensions/bulma-accordion/dist/bulma-accordion.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+  <script>
+    $(document).ready(function(){
+      var socket = io('localhost:1337');
+              socket.on('updated_chat', function(data){
+                var info = data;
+                
+                if (info.price.currencyPair == 'USDT_BTC'){
+                  console.log(info);
+                $(".coin").html("<p>"+info.price.currencyPair+": "+info.price.last+"</p>");
+                }
+            });
+          });
+  </script>
 </head>
 <body>
   <app-root></app-root>
