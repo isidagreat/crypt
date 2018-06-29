@@ -13,6 +13,10 @@ module.exports = function(app){
         console.log("made it to the routes ======================")
         routes.newauction(req,res);
     });
+    app.get('/api/listings/auction', function(req, res){
+        console.log("made it to the routes ======================")
+        routes.getauction(req,res);
+    });
     app.get('/api/listings', function(req, res){
         console.log("made it to the routes ======================")
         routes.listing(req,res);

@@ -19,6 +19,23 @@ module.exports = {
         })
 
     },
+    getauction: function (req, res) {
+        console.log("in getauction")
+        Auction.find({}, (err, _listing) => {
+            if (err) {
+                // Code...
+                console.log("IN ERRORS")
+                return (res.json("errs:err"));
+            }
+            else {
+                // Code...
+                console.log("IN Success")
+                console.log("Success")
+                return res.json({ _listing });
+            }
+        })
+
+    },
     new: function (req, res) {
         console.log("made it to the controller")
         console.log(req.body)
@@ -52,7 +69,7 @@ module.exports = {
         console.log("made it to the controller")
         console.log(req.body)
         // Create a a new Quote with the name and age
-        var listing = new Listing({
+        var auction = new Auction({
             title: req.body.title,
             description: req.body.description,
             price: req.body.price,
@@ -62,7 +79,7 @@ module.exports = {
             created_at: new Date()
         });
         // Try and save that Listing to the database(this method that actually insets intot the DB)
-        listing.save(function (err) {
+        auction.save(function (err) {
             if (err) {
 
                 // adjust the code below as needed to create a flash message with the tag and content you would like
@@ -72,8 +89,8 @@ module.exports = {
                 }
                 return res.json({ error: err })
             } else {
-                console.log("successfully Added Listing");
-                res.json({ message: listing });
+                console.log("successfully Added auction Listing");
+                res.json({ message: auction });
             }
         });
     },

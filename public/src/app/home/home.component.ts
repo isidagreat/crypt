@@ -8,11 +8,23 @@ import { CryptService } from '../crypt.service'
 })
 export class HomeComponent implements OnInit {
 listing: any;
+alisting: any;
   constructor(private _cryptService: CryptService) { }
 
   ngOnInit() {
     this.getlistings();
   }
+  getauction(){
+    //  Our http Response is an observable, store it in the variable tempObservable
+    let auctions = this._cryptService.getauction();
+    // subscribe to our observable and provide the code we would like to do with our data from the response
+    auctions.subscribe(data => {
+      console.log("got the auction listings!", data) 
+      this.alisting = data['_listing'];
+      console.log(this.listing);
+    });
+
+}
 
   getlistings(){
             //  Our http Response is an observable, store it in the variable tempObservable

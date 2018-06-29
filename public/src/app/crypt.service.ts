@@ -14,6 +14,9 @@ export class CryptService {
   addauction(listing){
     return this._http.post('/api/new/auction', listing);
   }
+  getauction(){
+    return this._http.get('/api/listings/auction');
+  }
   getlistings(){
     return this._http.get('/api/listings');
   }
