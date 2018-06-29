@@ -1,40 +1,59 @@
-<div class="columns">
-	<div class="column is-three-fifths is-offset-one-fifth">
-		<figure class="image is-3by1">
-			<img src="https://www.goodfreephotos.com/albums/united-arab-emirates/other-united-arab-emirates/panoramic-view-of-the-al-khan-lagoon-in-sharjah-united-arab-emirates.jpg">
+<div class="container">
+	<div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+		<div class='carousel-container'>
+			<div class='carousel-item has-background is-active'>
+				<img class="is-background" src="https://www.designyourway.net/blog/wp-content/uploads/2017/12/alliornothing.jpg" alt="" width="640" height="310" />
+			</div>
+			<div class='carousel-item has-background'>
+					<img class="is-background" src="https://www.apple.com/watch/films/images/og-img.png?201806011053" alt="" width="640" height="310" />
+			</div>
+			<div class='carousel-item has-background'>
+				<img class="is-background" src="https://sneakernews.com/wp-content/uploads/2018/06/adidas-creativity-is-the-answer.jpg" alt="" width="640" height="310" />
+			</div>
+			<div class='carousel-item has-background'>
+					<img class="is-background" src="https://2.bp.blogspot.com/-XjjtMLZOsus/V-gzz5AnkyI/AAAAAAAAADg/HjMkQQIzRNcdkNTzumupTLiZS4KuMB5dACLcB/s1600/nikead.jpg" alt="" width="640" height="310" />
+			</div>
+		</div>
+		<div class="carousel-navigation is-centered">
+			<div class="carousel-nav-left">
+			<i class="fa fa-chevron-left" aria-hidden="true"></i>
+			</div>
+			<div class="carousel-nav-right">
+			<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<h1 class="title"> Buy now!</h1>
+		</div>
+	</div>
+	<div class="columns">
+		<figure *ngFor = "let listin of listing" class="column is-3">
+			<a href="/item/{{listin._id}}"><img class="image is-128x128" src="{{listin.picture}}" alt=""></a>
+			<a href="/item/{{listin._id}}"><h1 class="subtitle">{{listin.title}}</h1></a>
 		</figure>
 	</div>
-</div>
-<div class="columns">
-	<div class="column">
-		<h1 class="title"> Buy now!</h1>
+	<div class="columns">
+		<div class="column">
+			<h1 class="title"> New Auctions</h1>
+		</div>
 	</div>
-</div>
-<div class="columns">
-	<figure *ngFor = "let listin of listing" class="column is-1">
-		<a href="/item/{{listin._id}}"><img class="image is-128x128" src="{{listin.picture}}" alt=""></a>
-		<a href="/item/{{listin._id}}"><h1 class="subtitle">{{listin.title}}</h1></a>
-	</figure>
-</div>
-<div class="columns">
-	<div class="column">
-		<h1 class="title"> New Auctions</h1>
+	<div class="columns">
+			<figure *ngFor = "let listins of alisting" class="column is-3">
+					<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
+					<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
+				</figure>
 	</div>
-</div>
-<div class="columns">
-		<figure *ngFor = "let listins of alisting" class="column is-1">
-				<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
-				<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
-			</figure>
-</div>
-<div class="columns">
-	<div class="column">
-		<h1 class="title">Ending Soon!</h1>
+	<div class="columns">
+		<div class="column">
+			<h1 class="title">Ending Soon!</h1>
+		</div>
 	</div>
-</div>
-<div class="columns">
-		<figure *ngFor = "let listins of alisting" class="column is-1">
-				<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
-				<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
-			</figure>
+	<div class="columns">
+			<figure *ngFor = "let listins of alisting" class="column is-3">
+					<a href="/item/{{listins._id}}"><img class="image is-128x128" src="{{listins.picture}}" alt=""></a>
+					<a href="/item/{{listins._id}}"><h1 class="subtitle">{{listins.title}}</h1></a>
+				</figure>
+	</div>
 </div>
