@@ -7,6 +7,7 @@ import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { LoginregisterComponent } from './loginregister/loginregister.component';
 import { RegisterComponent } from './loginregister/register/register.component';
 import { CreatelistingComponent } from './createlisting/createlisting.component';
+import { CreateauctionComponent } from './createauction/createauction.component';
 
 const routes: Routes = [
   {path: 'item/:id', component:ItempageComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'profile', component:ProfileComponent },
   {path: 'cart', component:ShoppingcartComponent},
   {path: 'createlisting', component:CreatelistingComponent},
+  {path: 'createauction', component:CreateauctionComponent},
   {path: 'account', component:LoginregisterComponent, children:[{path:'register',component:RegisterComponent, outlet: 'popup'}]},
   {path: '', pathMatch:'full', redirectTo:'home'}
 ];

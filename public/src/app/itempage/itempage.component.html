@@ -4,7 +4,7 @@
       <div class="tile">
         <div class="tile is-parent is-vertical">
           <article class="tile is-child notification">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/HTC_One_diagonal_focus.png/500px-HTC_One_diagonal_focus.png">
+            <img src="{{listing.picture}}">
           </article>
           <article class="tile is-child notification">
             <div class="columns">
@@ -31,12 +31,12 @@
         </div>
         <div class="tile is-parent is-vertical is-6">
             <article class="tile is-child notification">
-              <p class="title">HTC ONE m7</p>
+              <p class="title">{{listing.title}}</p>
               <p class="subtitle">2013 HTC ONE Mint Condition</p>
               <div class="content" style="border-top-color: #dbdbdb;">
                   <div>
                       <p>Market Price: $300</p>
-                      <p>Asking Price: $200</p>
+                      <p>Asking Price: ${{listing.price}}</p>
                       <p>AltCoin:</p>
                       <a class="button">Add to cart</a>
                       <a class="button">Purchase Now</a>
@@ -45,9 +45,7 @@
 
                       <p>Brand: HTC</p>
                       <p>Condition: Like New</p>
-                      <p>Product Summary: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, 
-                        aliquam quaerat? Quidem non culpa fugiat? Deserunt, obcaecati commodi praesentium maxime 
-                        voluptatem incidunt expedita dolorem, nulla voluptatum dolore deleniti iure beatae?
+                      <p>Product Summary: {{listing.description}}
                       </p>
                       <p>Shipping: $7.99</p>
                       <p>Expected Delivery Date: Tommorrow</p>

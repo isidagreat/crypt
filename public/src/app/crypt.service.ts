@@ -11,11 +11,14 @@ export class CryptService {
   addlisting(listing){
     return this._http.post('/api/new/listing', listing);
   }
+  addauction(listing){
+    return this._http.post('/api/new/auction', listing);
+  }
   getlistings(){
     return this._http.get('/api/listings');
   }
   getonelistings(id){
-    return this._http.get('/api/listing/'+id);
+    return this._http.get('/api/listing/'+id['id']);
   }
 
 }

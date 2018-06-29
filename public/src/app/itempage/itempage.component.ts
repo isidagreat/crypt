@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Activated}
+import { ActivatedRoute } from '@angular/router';
 import { CryptService } from '../crypt.service'
 
 @Component({
@@ -9,16 +9,20 @@ import { CryptService } from '../crypt.service'
 })
 export class ItempageComponent implements OnInit {
   listing: any;
-  constructor(private _cryptService: CryptService) { }
+  id: any = {};
+  constructor(private _cryptService: CryptService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
-    this.getonelisting(id);
+    this.route.params.subscribe(params => {
+      this.id['id'] = params['id'];
+    });
+    this.getonelisting();
   }
 
-  getonelistings(id){
+  getonelisting(){
+    console.log(this.id)
     //  Our http Response is an observable, store it in the variable tempObservable
-    let listings = this._cryptService.getonelistings(id);
+    let listings = this._cryptService.getonelistings(this.id);
     // subscribe to our observable and provide the code we would like to do with our data from the response
     listings.subscribe(data => {
       console.log("got the listing!", data) 

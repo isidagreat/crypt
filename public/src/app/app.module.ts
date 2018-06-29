@@ -15,6 +15,7 @@ import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { LoginregisterComponent } from './loginregister/loginregister.component';
 import { RegisterComponent } from './loginregister/register/register.component';
 import { CreatelistingComponent } from './createlisting/createlisting.component';
+import { CreateauctionComponent } from './createauction/createauction.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CreatelistingComponent } from './createlisting/createlisting.component'
     ShoppingcartComponent,
     LoginregisterComponent,
     RegisterComponent,
-    CreatelistingComponent
+    CreatelistingComponent,
+    CreateauctionComponent
   ],
   imports: [
     BrowserModule,
